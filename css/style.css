@@ -1,0 +1,517 @@
+@charset "utf-8";
+/* 공통 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', AppleGothic, sans-serif;
+    font-size: 16px;
+    color: #000;
+    scroll-behavior: smooth;
+}
+ul li {
+    list-style: none;
+}
+
+body {   
+    background: #fff;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.cf::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.m-auto{
+    margin: auto;
+}
+.m-top{
+    margin-top: 120px;
+}
+.button {
+    cursor: pointer;
+    border-radius: 20px;
+}
+.go-top{
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(238, 238, 238, 0.8);
+    text-align: center;
+    line-height: 10px;
+    padding-top: 15px;
+}
+.go-to-font{
+    font-size: 10px;
+}
+iframe{
+    border: none;
+}
+
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    line-height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+}
+/* 책밥 마크와 로고 */
+#logoWrap {
+    width: 180px;
+    height: 100px;
+}
+.logo-img > img {
+    height: 43px;
+    vertical-align: middle;
+    padding-right: 16px;
+}
+.logo-title{
+    font-size: 32px;
+    color: #ff9011;
+    font-weight: 700;
+}
+
+/* GNB 메뉴 */
+nav {
+    height: 100px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 56px;
+}
+.gnb{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#navi > li {
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 20px;;
+}
+#navi > li:hover {
+    opacity: 0.5;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+/* 검색폼 */
+.search-wrap{
+    position: relative;
+}
+form.search input[type=search] {
+    padding: 6px 16px ;
+    font-size: 12px;
+    border:1px solid #eee;
+    background-color: #eee;
+    outline: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 180px;
+}
+.search-btn{
+    margin-left: -4px;
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #fff;
+    border:1px solid #929292;
+    background-color: #929292;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
+/* gnb 메뉴 선택 */
+.gnb-active {
+    color: #f95522;
+}
+
+/* 이벤트 */
+#banEvent { 
+    padding-top: 200px;
+    background-color: #f6f6f4;
+    height: 800px;
+}
+.ban-event-on {    
+    width: 1300px;
+    background-image: url(../imgs/main_book.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+.ban-tit-wrap{
+    vertical-align: middle;
+}
+.ban-tit-wrap > h1 { 
+    font-size: 84px;
+    letter-spacing: -8px;
+    line-height: 100px;
+    text-align: left;
+    font-weight: 700;
+    width: 600px;  
+}
+.ban-tit-wrap > p {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: left;
+    font-weight: 300;
+    width: 500px; 
+}
+.event-btn {
+    margin-top: 20px;
+}
+.btn-more {
+    width: 115px;
+    height: 40px;
+    background-color: #f95522;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 40px;
+}
+.btn-more:hover {
+    background-color: #fff;
+    border: 1px solid #f95522;
+    color: #f95522;    
+}
+
+/* 책밥 소개 */
+.biz-info {
+    margin: 0 auto;
+    width: 1300px;
+    height: 800px;
+}
+.biz-text-wrap{
+    text-align: center;
+    width: 800px;
+}
+.biz-text-wrap > h2 {
+    font-size: 34px;
+    font-weight: 700;
+    padding-top: 70px;
+    letter-spacing: -1px;
+}
+.biz-text-wrap > p {
+    letter-spacing: -1px;
+    line-height: 25px;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+.biz-3column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1300px;
+}
+.biz-3column-detail {
+    flex: 1;
+    padding: 0 30px;
+    text-align: center;
+}
+.biz-3column-detail > img {
+    width: 99px;
+}
+.biz-3column-detail > h3 {
+    margin: 10px 0 10px 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+.biz-3column-detail > p {
+    font-weight: 300;
+    line-height: 24px;
+}
+
+/* 유튜브 */
+#youtubeEvent{
+    height: 310px;
+}
+.youtube-event-bg{
+    height: 280px;
+    background-color: #f6f6f4;
+}
+.movie-story-wrap{
+    width: 1080px;
+}
+.movie-youtube{
+    margin-top: -20px; 
+    box-shadow: 30px 30px 30px 10px rgba(73, 44, 34, 0.7);
+    width: 530px;
+    height: 283px; 
+}
+.movie-our-story{
+    margin-left: 60px;
+    padding-top: 50px;
+    width: 460px;
+    height: 283px;
+}
+.movie-our-story > h3{
+    width: 500px;
+    font-size: 34px;
+    font-weight: 700;
+}
+.movie-our-story > h3::after{
+    content: '';
+    display: inline-block;
+    width: 220px;
+    border-bottom: 4px solid #000;
+}
+.movie-our-story > p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -1px;
+    padding-top: 30px;
+}
+
+/* 책 갤러리 */
+#bookWrap {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 900px;
+}
+.pt-st{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    width: 1077px;
+}
+.book-photo {
+    flex-basis: 657px;
+}
+.book-photo-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 657px;
+}
+.book-photo-bg{
+    background-color: rgb(223, 176, 114);
+    width: 219px;
+    height: 286px;
+}
+.book-photo-bg img {
+    width: 219px;
+    height: 286px;
+    opacity: 0.7;
+}
+.book-photo-bg img:hover {
+    width: 219px;
+    height: 286px;
+    opacity: 1;
+}
+
+/* 뉴스 리스트 */
+.book-news{
+    flex-basis: 420px;
+    height: 572px;
+    color: #1b1b1b;
+    background-color: rgb(255, 227, 190);
+}
+.book-news-box{
+     padding: 40px;
+}
+.book-news-box > h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+table, tr, td{
+    margin-top: 80px;
+    padding: 6px ;
+    border-collapse: collapse;
+    border-bottom: 1px  solid rgb(202, 171, 130);
+    width: 100%;
+}
+table th{
+    font-weight: 500;
+}
+.date{
+    font-size: 12px;
+}
+
+/* 풋터 */
+footer {
+    background-color: #1b1b1b;
+    height: 300px;
+}
+.footer-wrap {
+    padding: 50px 0;
+    text-align: center;
+    width: 1300px;
+    height: 200px;
+}
+.footer-wrap > img {
+    width: 54px;
+    height: 58px;
+}
+.footer-adr > h4{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.footer-adr p{
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 25px;
+    color: #aeaeae;
+}
+
+/* 브레드크럼 */
+#breadcrumb{
+    margin-top: 120px;
+    text-align: right;
+    font-weight: 100;    
+    width: 1300px;
+}
+.breadcrumb-txt li{
+    font-size: 12px;
+    display: inline-block;
+    color: #8a8a8a;
+    font-weight: 300;
+    padding: 0 5px 0 5px;
+}
+.breadcrumb-txt li::after{
+    content: '\232A';
+    padding-left: 10px;
+    color: #8a8a8a;
+    font-weight: 300;
+}
+.breadcrumb-txt li:last-child::after{
+    content: '';
+}
+
+/* 1일#하루 책소개 */
+.block-contents {
+    margin-top: 40px;
+    width: 1059px;
+    height: 800px;
+}
+.block-contents > h1 {
+    color: #8a8a8a;
+    font-size: 20px;
+    line-height: 30px;
+}
+.block-contents > h2 {
+    color: #000;
+    font-size: 44px;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+.block-contents > p {
+    width: 600px;
+    color: #000;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 100;
+    padding-top: 20px;
+}
+.block-contents-photo{
+    width: 1059px;
+    margin-top: 200px;
+}
+.block-contents-photo > img{
+    display: block;
+    margin-left: auto;
+    width: 180px;
+}
+
+/* 배경색 사각형 4개 수평 정렬 */
+#contents-bg{
+    background-color: #f6f6f4;
+    padding: 140px 0 140px 0;
+}
+.box-inline-4{
+    width: 1320px;
+    height: 290px;
+    display: block;
+    line-height: 100%;
+}
+.box-inline-4 > li{
+    width: 290px;
+    height: 290px;
+    display: inline-block;
+    margin: 0 18px 0 18px;
+}
+.box-inline-4 > li:first-child{
+    background-color: #fea484;
+    padding: 20px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: -1px;
+    line-height: 40px;
+    vertical-align: top;
+}
+.button-more{
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    padding-top: 50px;
+}
+
+/* 제목 이미지 가운데 정렬 */
+.block-center-contents{
+    width: 820px;
+    height: 860px;
+    text-align: center;
+}
+.block-center-contents h2{
+    margin-top: 80px;
+    font-size: 34px;
+}
+.block-center-contents p{
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.block-center-contents img{
+    margin-top: 40px;
+    height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
