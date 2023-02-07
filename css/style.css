@@ -446,7 +446,7 @@ footer {
 }
 
 /* 배경색 사각형 4개 수평 정렬 */
-#contents-bg{
+#contentsBgc{
     background-color: #f6f6f4;
     padding: 140px 0 140px 0;
 }
